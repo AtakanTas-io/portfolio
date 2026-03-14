@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeler | Atakan Taş</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/919/919841.png">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        .construction-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+        }
+
+        .blinking-cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background-color: var(--primary-color);
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">&lt;AtakanTaş /&gt;</div>
+            <div class="hamburger" id="hamburger-btn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="hakkinda.html">Hakkında</a></li>
+                <li><a href="hobiler.html">Hobiler</a></li>
+                <li><a href="portfolyo.html" class="active">Projeler</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><button id="theme-toggle">Light Mode</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="construction-container">
+        <h1 style="font-size: 3rem; margin-bottom: 20px;">404 <span style="font-size:1.5rem">/ Geliştiriliyor...</span>
+        </h1>
+
+        <p>
+            > Proje dosyaları yükleniyor... %99 <br>
+            > Bu alan henüz kodlanmadı. Daha sonra tekrar kontrol edin.
+            <span class="blinking-cursor"></span>
+        </p>
+
+        <br><br>
+        <a href="index.html" class="btn">
+            < GERİ DÖN</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Atakan Taş. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
