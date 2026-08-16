@@ -3,14 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Atakan Taş ile iletişime geçin — proje teklifleri veya mesajlarınız için iletişim formu." />
+    <title>İletişim | Atakan Taş</title>
+    <meta name="description" content="Atakan Taş ile iletişime geç — proje teklifleri veya sorularin için." />
     <meta property="og:title" content="Atakan Taş" />
-    <meta property="og:description" content="Atakan Taş ile iletişime geçin — proje teklifleri veya mesajlarınız için iletişim formu." />
+    <meta property="og:description" content="Atakan Taş ile iletişime geç — proje teklifleri veya sorularin için." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tasatakan.netlify.app/iletisim.html" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn-icons-png.flaticon.com/512/919/919841.png"
+    />
     <script>
-      // Tema flaşını (FOUC) önlemek için erken çalışır; CSS/gövde
-      // yüklenmeden önce kayıtlı temayı <html> etiketine uygular.
+      // Tema flaşını (FOUC) önlemek için erken çalışır.
       (function () {
         try {
           if (localStorage.getItem("theme") === "light") {
@@ -19,127 +31,102 @@
         } catch (e) {}
       })();
     </script>
-    <title>İletişim | Atakan Taş</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://cdn-icons-png.flaticon.com/512/919/919841.png"
-    />
   </head>
 
   <body>
-    <header>
-      <nav class="navbar">
-        <div class="logo">&lt;AtakanTaş /&gt;</div>
-        <div class="hamburger" id="hamburger-btn">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="index.html">Ana Sayfa</a></li>
-          <li><a href="hakkinda.html">Hakkında</a></li>
-          <li><a href="hobiler.html">Hobiler</a></li>
-          <li><a href="portfolyo.html">Projeler</a></li>
-          <li><a href="iletisim.html" class="active">İletişim</a></li>
-          <li><button id="theme-toggle">Light Mode</button></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main>
-      <section class="contact-section">
-        <h1>&lt;Bağlantı Kur /&gt;</h1>
-        <p style="margin-bottom: 20px">
-          Proje teklifleri veya sadece merhaba demek için terminali kullan:
-        </p>
-
-        <form
-          id="contact-form"
-          name="iletisim"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-        >
-          <input type="hidden" name="form-name" value="iletisim" />
-          <p style="position: absolute; left: -9999px" aria-hidden="true">
-            <label>Bu alanı boş bırakın: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
-          </p>
-          <div class="form-group">
-            <label for="name">Kullanıcı Adı (İsim):</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Adınız..."
-              required
-              autocomplete="off"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="email">E-Posta Protokolü:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="ornek@email.com"
-              required
-              autocomplete="off"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="message">Veri Paketi (Mesaj):</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              placeholder="Mesajınızı buraya kodlayın..."
-              required
-            ></textarea>
-          </div>
-
-          <button type="submit" class="btn full-width">GÖNDER >_</button>
-        </form>
-        <div id="form-feedback"></div>
-      </section>
-    </main>
-
-    <footer>
-      <p>&copy; 2026 Atakan Taş. Tüm hakları saklıdır.</p>
-      <div class="social-links">
-        <a
-          href="https://github.com/AtakaanShiva"
-          target="_blank"
-          style="
-            color: var(--primary-color);
-            margin: 0 10px;
-            text-decoration: none;
-          "
-          >[ GitHub ]</a
-        >
-        <a
-          href="https://linkedin.com/in/atakan-ta%C5%9F-4824362a7"
-          target="_blank"
-          style="
-            color: var(--primary-color);
-            margin: 0 10px;
-            text-decoration: none;
-          "
-          >[ LinkedIn ]</a
-        >
+    <div class="app-shell">
+      <div class="titlebar">
+        <div class="titlebar-dots"><span></span><span></span><span></span></div>
+        <div class="titlebar-title code">atakan-tas — iletisim.html</div>
       </div>
-    </footer>
+
+      <div class="shell-body">
+        <nav class="activity-bar" aria-label="Ana gezinme">
+          <a class="activity-link" href="index.html" aria-label="Ana Sayfa" title="Ana Sayfa"><svg viewBox="0 0 24 24"><path d="M3 9.5 12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></a>
+          <a class="activity-link" href="hakkinda.html" aria-label="Hakkında" title="Hakkında"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></a>
+          <a class="activity-link" href="portfolyo.html" aria-label="Projeler" title="Projeler"><svg viewBox="0 0 24 24"><path d="M3 6.5a1 1 0 0 1 1-1h5l2 2.2h9a1 1 0 0 1 1 1V18a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/></svg></a>
+          <a class="activity-link" href="hobiler.html" aria-label="İlgi Alanları" title="İlgi Alanları"><svg viewBox="0 0 24 24"><path d="M12 20.5S3 14.8 3 8.9C3 5.6 5.5 3.5 8.3 3.5c1.8 0 3.3 1 4.7 2.6 1.4-1.6 2.9-2.6 4.7-2.6 2.8 0 5.3 2.1 5.3 5.4 0 5.9-9 11.6-9 11.6z"/></svg></a>
+          <a class="activity-link active" href="iletisim.html" aria-label="İletişim" title="İletişim"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m4 6.5 8 6.2 8-6.2"/></svg></a>
+          <div class="activity-bar-spacer"></div>
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Temayı değiştir" title="Temayı değiştir">
+            <svg viewBox="0 0 24 24" class="icon-sun"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19v2.5M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.5 12h2.4M19 12h2.5M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/></svg>
+            <svg viewBox="0 0 24 24" class="icon-moon" style="display:none"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z"/></svg>
+          </button>
+        </nav>
+
+        <div class="main-col">
+          <div class="tabbar" id="tabbar">
+            <button class="tabbar-toggle" id="tabbar-toggle" aria-label="Sayfa menüsü">
+              <svg viewBox="0 0 24 24"><path d="M4 6.5h16M4 12h16M4 17.5h16"/></svg>
+            </button>
+            <a class="tab" href="index.html"><span class="tab-dot"></span>index.html</a>
+            <a class="tab" href="hakkinda.html"><span class="tab-dot"></span>hakkinda.html</a>
+            <a class="tab" href="portfolyo.html"><span class="tab-dot"></span>portfolyo.html</a>
+            <a class="tab" href="hobiler.html"><span class="tab-dot"></span>hobiler.html</a>
+            <a class="tab active" href="iletisim.html"><span class="tab-dot"></span>iletisim.html</a>
+          </div>
+
+          <main class="editor-content">
+            <div class="container-narrow">
+              <div class="page-header">
+                <span class="eyebrow">iletisim.connect()</span>
+                <h1 class="section-title">Bağlantı <span class="accent">Kur</span></h1>
+                <p>Proje teklifleri, staj/iş fırsatları ya da sadece merhaba demek için...</p>
+              </div>
+
+              <div class="contact-layout">
+                <aside class="contact-info-card">
+                  <h2 class="contact-info-title code">// iletişim kanalları</h2>
+                  <ul class="contact-info-list">
+                    <li><a href="mailto:tasatakan5@gmail.com"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m4 6.5 8 6.2 8-6.2"/></svg> tasatakan5@gmail.com</a></li>
+                    <li><a href="https://linkedin.com/in/atakan-ta%C5%9F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7.5 10.5v6M7.5 7.5v.01M12 16.5v-3.7c0-1.5 1-2.5 2.3-2.5 1.3 0 2.2 1 2.2 2.5v3.7"/></svg> linkedin.com/in/atakan-taş</a></li>
+                    <li><a href="https://github.com/AtakaanShiva" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> github.com/AtakaanShiva</a></li>
+                    <li><span><svg viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-11.5a7 7 0 1 0-14 0C5 14.5 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg> Toroslar, Mersin</span></li>
+                  </ul>
+                </aside>
+
+                <div class="contact-form-card">
+                  <form id="contact-form" name="iletisim" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="iletisim" />
+                    <p style="position:absolute; left:-9999px" aria-hidden="true">
+                      <label>Bu alanı boş bırakın: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+                    </p>
+                    <div class="form-group">
+                      <label for="name">İsim <span class="req">*</span></label>
+                      <input type="text" id="name" name="name" placeholder="Adınız" required autocomplete="off" />
+                    </div>
+                    <div class="form-group">
+                      <label for="email">E-posta <span class="req">*</span></label>
+                      <input type="email" id="email" name="email" placeholder="ornek@email.com" required autocomplete="off" />
+                    </div>
+                    <div class="form-group">
+                      <label for="message">Mesaj <span class="req">*</span></label>
+                      <textarea id="message" name="message" placeholder="Mesajını yaz..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-block">GÖNDER &gt;_</button>
+                  </form>
+                  <div id="form-feedback" class="form-feedback code" role="status"></div>
+                </div>
+              </div>
+            </div>
+          </main>
+
+          <footer class="statusbar">
+            <div class="statusbar-left">
+              <span><svg viewBox="0 0 24 24"><circle cx="6" cy="5" r="2"/><circle cx="6" cy="19" r="2"/><circle cx="18" cy="8" r="2"/><path d="M6 7v10M6 12c0-2.5 2-4 5-4h5"/></svg> main</span>
+              <span>UTF-8</span>
+              <span>TR</span>
+            </div>
+            <div class="statusbar-right">
+              <a href="https://github.com/AtakaanShiva" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg> GitHub</a>
+              <a href="https://linkedin.com/in/atakan-ta%C5%9F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7.5 10.5v6M7.5 7.5v.01M12 16.5v-3.7c0-1.5 1-2.5 2.3-2.5 1.3 0 2.2 1 2.2 2.5v3.7"/></svg> LinkedIn</a>
+              <span id="status-clock"></span>
+              <span><span class="status-pulse"></span> Online</span>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
