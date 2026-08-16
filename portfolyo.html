@@ -1,88 +1,217 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Atakan Taş'ın projeleri: kariyer chatbot'u, Meta reklam otomasyonu ve LeetCode-GitHub takip aracı." />
+    <meta property="og:title" content="Atakan Taş" />
+    <meta property="og:description" content="Atakan Taş'ın projeleri: kariyer chatbot'u, Meta reklam otomasyonu ve LeetCode-GitHub takip aracı." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tasatakan.netlify.app/portfolyo.html" />
+    <script>
+      // Tema flaşını (FOUC) önlemek için erken çalışır; CSS/gövde
+      // yüklenmeden önce kayıtlı temayı <html> etiketine uygular.
+      (function () {
+        try {
+          if (localStorage.getItem("theme") === "light") {
+            document.documentElement.classList.add("light-mode");
+          }
+        } catch (e) {}
+      })();
+    </script>
     <title>Projeler | Atakan Taş</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/919/919841.png">
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn-icons-png.flaticon.com/512/919/919841.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-    <style>
-        .construction-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 60vh;
-        }
-
-        .blinking-cursor {
-            display: inline-block;
-            width: 10px;
-            height: 20px;
-            background-color: var(--primary-color);
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-            0% {
-                opacity: 0;
-            }
-
-            50% {
-                opacity: 1;
-            }
-
-            100% {
-                opacity: 0;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
+  <body>
     <header>
-        <nav class="navbar">
-            <div class="logo">&lt;AtakanTaş /&gt;</div>
-            <div class="hamburger" id="hamburger-btn">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="hakkinda.html">Hakkında</a></li>
-                <li><a href="hobiler.html">Hobiler</a></li>
-                <li><a href="portfolyo.html" class="active">Projeler</a></li>
-                <li><a href="iletisim.html">İletişim</a></li>
-                <li><button id="theme-toggle">Light Mode</button></li>
-            </ul>
-        </nav>
+      <nav class="navbar">
+        <div class="logo">&lt;AtakanTaş /&gt;</div>
+        <div class="hamburger" id="hamburger-btn">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="hakkinda.html">Hakkında</a></li>
+          <li><a href="hobiler.html">Hobiler</a></li>
+          <li><a href="portfolyo.html" class="active">Projeler</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+          <li><button id="theme-toggle">Light Mode</button></li>
+        </ul>
+      </nav>
     </header>
 
-    <main class="construction-container">
-        <h1 style="font-size: 3rem; margin-bottom: 20px;">404 <span style="font-size:1.5rem">/ Geliştiriliyor...</span>
-        </h1>
+    <main class="container">
+      <h1
+        style="
+          margin-bottom: 2rem;
+          color: var(--primary-color);
+          font-size: 2.5rem;
+        "
+      >
+        &lt; Projelerim /&gt;
+      </h1>
 
-        <p>
-            > Proje dosyaları yükleniyor... %99 <br>
-            > Bu alan henüz kodlanmadı. Daha sonra tekrar kontrol edin.
-            <span class="blinking-cursor"></span>
-        </p>
+      <div class="hobby-grid">
+        <div class="hobby-card">
+          <div
+            class="accordion-content"
+            style="max-height: 1000px; padding: 25px"
+          >
+            <h3
+              style="
+                color: var(--primary-color);
+                margin-bottom: 10px;
+                font-family: &quot;Courier Prime&quot;, monospace;
+              "
+            >
+              ÇÜ Kariyer Robotu
+            </h3>
+            <p
+              style="
+                background: transparent;
+                border: none;
+                padding: 0;
+                color: var(--text-color);
+              "
+            >
+              Üniversite öğrencilerine asistanlık yapması amacıyla tasarlanmış,
+              RESTful API mimarisi ile çalışan interaktif kariyer chatbot'u.
+            </p>
+            <p
+              style="
+                color: var(--accent-color);
+                font-size: 0.85rem;
+                margin-top: 15px;
+                font-family: &quot;Courier Prime&quot;, monospace;
+              "
+            >
+              > Tech: HTML/CSS/JS, REST API
+            </p>
+          </div>
+        </div>
 
-        <br><br>
-        <a href="index.html" class="btn">
-            < GERİ DÖN</a>
+        <div class="hobby-card">
+          <div
+            class="accordion-content"
+            style="max-height: 1000px; padding: 25px"
+          >
+            <h3
+              style="
+                color: var(--primary-color);
+                margin-bottom: 10px;
+                font-family: &quot;Courier Prime&quot;, monospace;
+              "
+            >
+              Meta Reklam Otomasyonu
+            </h3>
+            <p
+              style="
+                background: transparent;
+                border: none;
+                padding: 0;
+                color: var(--text-color);
+              "
+            >
+              Bir işletme için Meta Graph API ve Google Sheets entegrasyonu
+              kullanılarak geliştirilmiş, pazarlama kampanyalarını ve görsel
+              asset'leri otomatik yöneten Python scripti.
+            </p>
+            <p
+              style="
+                color: var(--accent-color);
+                font-size: 0.85rem;
+                margin-top: 15px;
+                font-family: &quot;Courier Prime&quot;, monospace;
+              "
+            >
+              > Tech: Python, Meta API, Google Sheets
+            </p>
+          </div>
+        </div>
+
+        <div class="hobby-card">
+          <div
+            class="accordion-content"
+            style="max-height: 1000px; padding: 25px"
+          >
+            <h3
+              style="
+                color: var(--primary-color);
+                margin-bottom: 10px;
+                font-family: &quot;Courier Prime&quot;, monospace;
+              "
+            >
+              LeetCode GitHub Tracker
+            </h3>
+            <p
+              style="
+                background: transparent;
+                border: none;
+                padding: 0;
+                color: var(--text-color);
+              "
+            >
+              LeetCode platformundaki problem çözme kilometre taşlarını otomatik
+              olarak takip edip kişisel GitHub profiline yansıtan otomasyon
+              aracı.
+            </p>
+            <p
+              style="
+                color: var(--accent-color);
+                font-size: 0.85rem;
+                margin-top: 15px;
+                font-family: &quot;Courier Prime&quot;, monospace;
+              "
+            >
+              > Tech: Python, GitHub Actions
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 Atakan Taş. Tüm hakları saklıdır.</p>
+      <p>&copy; 2026 Atakan Taş. Tüm hakları saklıdır.</p>
+      <div class="social-links">
+        <a
+          href="https://github.com/AtakaanShiva"
+          target="_blank"
+          style="
+            color: var(--primary-color);
+            margin: 0 10px;
+            text-decoration: none;
+          "
+          >[ GitHub ]</a
+        >
+        <a
+          href="https://linkedin.com/in/atakan-ta%C5%9F-4824362a7"
+          target="_blank"
+          style="
+            color: var(--primary-color);
+            margin: 0 10px;
+            text-decoration: none;
+          "
+          >[ LinkedIn ]</a
+        >
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

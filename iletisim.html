@@ -1,77 +1,146 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Atakan Taş ile iletişime geçin — proje teklifleri veya mesajlarınız için iletişim formu." />
+    <meta property="og:title" content="Atakan Taş" />
+    <meta property="og:description" content="Atakan Taş ile iletişime geçin — proje teklifleri veya mesajlarınız için iletişim formu." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tasatakan.netlify.app/iletisim.html" />
+    <script>
+      // Tema flaşını (FOUC) önlemek için erken çalışır; CSS/gövde
+      // yüklenmeden önce kayıtlı temayı <html> etiketine uygular.
+      (function () {
+        try {
+          if (localStorage.getItem("theme") === "light") {
+            document.documentElement.classList.add("light-mode");
+          }
+        } catch (e) {}
+      })();
+    </script>
     <title>İletişim | Atakan Taş</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/919/919841.png">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn-icons-png.flaticon.com/512/919/919841.png"
+    />
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <nav class="navbar">
-            <div class="logo">&lt;AtakanTaş /&gt;</div>
-            <div class="hamburger" id="hamburger-btn">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="hakkinda.html">Hakkında</a></li>
-                <li><a href="hobiler.html">Hobiler</a></li>
-                <li><a href="portfolyo.html">Projeler</a></li>
-                <li><a href="iletisim.html" class="active">İletişim</a></li>
-                <li><button id="theme-toggle">Light Mode</button></li>
-            </ul>
-        </nav>
+      <nav class="navbar">
+        <div class="logo">&lt;AtakanTaş /&gt;</div>
+        <div class="hamburger" id="hamburger-btn">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="hakkinda.html">Hakkında</a></li>
+          <li><a href="hobiler.html">Hobiler</a></li>
+          <li><a href="portfolyo.html">Projeler</a></li>
+          <li><a href="iletisim.html" class="active">İletişim</a></li>
+          <li><button id="theme-toggle">Light Mode</button></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <section class="contact-section">
-            <h1>&lt;Bağlantı Kur /&gt;</h1>
-            <p>Proje teklifleri veya sadece merhaba demek için terminali kullan:</p>
+      <section class="contact-section">
+        <h1>&lt;Bağlantı Kur /&gt;</h1>
+        <p style="margin-bottom: 20px">
+          Proje teklifleri veya sadece merhaba demek için terminali kullan:
+        </p>
 
-            <form id="contact-form">
-                <div class="form-group">
-                    <label for="name">Kullanıcı Adı (İsim):</label>
-                    <input type="text" id="name" name="name" placeholder="Adınız..." required autocomplete="off">
-                </div>
+        <form
+          id="contact-form"
+          name="iletisim"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="iletisim" />
+          <p style="position: absolute; left: -9999px" aria-hidden="true">
+            <label>Bu alanı boş bırakın: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+          </p>
+          <div class="form-group">
+            <label for="name">Kullanıcı Adı (İsim):</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Adınız..."
+              required
+              autocomplete="off"
+            />
+          </div>
 
-                <div class="form-group">
-                    <label for="email">E-Posta Protokolü:</label>
-                    <input type="email" id="email" name="email" placeholder="ornek@email.com" required
-                        autocomplete="off">
-                </div>
+          <div class="form-group">
+            <label for="email">E-Posta Protokolü:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="ornek@email.com"
+              required
+              autocomplete="off"
+            />
+          </div>
 
-                <div class="form-group">
-                    <label for="message">Veri Paketi (Mesaj):</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Mesajınızı buraya kodlayın..."
-                        required></textarea>
-                </div>
+          <div class="form-group">
+            <label for="message">Veri Paketi (Mesaj):</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Mesajınızı buraya kodlayın..."
+              required
+            ></textarea>
+          </div>
 
-                <button type="submit" class="btn full-width">GÖNDER >_</button>
-            </form>
-
-            <div id="form-feedback"></div>
-        </section>
+          <button type="submit" class="btn full-width">GÖNDER >_</button>
+        </form>
+        <div id="form-feedback"></div>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Atakan Taş. Tüm hakları saklıdır.</p>
-        <div class="social-links">
-            <a href="https://github.com/kullaniciadin" target="_blank"
-                style="color: var(--primary-color); margin: 0 10px; text-decoration: none;">[ GitHub ]</a>
-            <a href="https://linkedin.com/in/kullaniciadin" target="_blank"
-                style="color: var(--primary-color); margin: 0 10px; text-decoration: none;">[ LinkedIn ]</a>
-        </div>
+      <p>&copy; 2026 Atakan Taş. Tüm hakları saklıdır.</p>
+      <div class="social-links">
+        <a
+          href="https://github.com/AtakaanShiva"
+          target="_blank"
+          style="
+            color: var(--primary-color);
+            margin: 0 10px;
+            text-decoration: none;
+          "
+          >[ GitHub ]</a
+        >
+        <a
+          href="https://linkedin.com/in/atakan-ta%C5%9F-4824362a7"
+          target="_blank"
+          style="
+            color: var(--primary-color);
+            margin: 0 10px;
+            text-decoration: none;
+          "
+          >[ LinkedIn ]</a
+        >
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

@@ -1,110 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Atakan Taş'ın ilgi alanları: etik hackerlık, futbol ve psikoloji." />
+    <meta property="og:title" content="Atakan Taş" />
+    <meta property="og:description" content="Atakan Taş'ın ilgi alanları: etik hackerlık, futbol ve psikoloji." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tasatakan.netlify.app/hobiler.html" />
+    <script>
+      // Tema flaşını (FOUC) önlemek için erken çalışır; CSS/gövde
+      // yüklenmeden önce kayıtlı temayı <html> etiketine uygular.
+      (function () {
+        try {
+          if (localStorage.getItem("theme") === "light") {
+            document.documentElement.classList.add("light-mode");
+          }
+        } catch (e) {}
+      })();
+    </script>
     <title>Hobiler | Atakan Taş</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/919/919841.png">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn-icons-png.flaticon.com/512/919/919841.png"
+    />
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <nav class="navbar">
-            <div class="logo">&lt;AtakanTaş /&gt;</div>
-            <div class="hamburger" id="hamburger-btn">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="hakkinda.html">Hakkında</a></li>
-                <li><a href="hobiler.html" class="active">Hobiler</a></li>
-                <li><a href="portfolyo.html">Projeler</a></li>
-                <li><a href="iletisim.html">İletişim</a></li>
-                <li><button id="theme-toggle">Light Mode</button></li>
-            </ul>
-        </nav>
+      <nav class="navbar">
+        <div class="logo">&lt;AtakanTaş /&gt;</div>
+        <div class="hamburger" id="hamburger-btn">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="hakkinda.html">Hakkında</a></li>
+          <li><a href="hobiler.html" class="active">Hobiler</a></li>
+          <li><a href="portfolyo.html">Projeler</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+          <li><button id="theme-toggle">Light Mode</button></li>
+        </ul>
+      </nav>
     </header>
 
     <main class="container">
-        <h1>&lt; İlgi_Alanlarım /&gt;</h1>
-        <p>Veri paketlerini açmak için kartlara tıklayın.</p>
+      <h1 style="color: var(--primary-color); margin-bottom: 10px">
+        &lt; İlgi_Alanlarım /&gt;
+      </h1>
+      <p>Veri paketlerini açmak için kartlara tıklayın.</p>
 
-        <div class="hobby-grid">
-
-            <div class="hobby-card">
-                <div class="accordion-header card-header">
-                    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop"
-                        alt="Hacker Mask Binary Code">
-                    <div class="card-overlay">
-                        <h3>Etik Hackerlık</h3>
-                        <span class="icon">+</span>
-                    </div>
-                </div>
-                <div class="accordion-content">
-                    <p>
-                        Sistem güvenliği ve penetrasyon testleri üzerine çalışıyorum.
-                        <strong>Kali Linux</strong> ve ağ protokolleri (TCP/IP) üzerine pratik yapıyorum.
-                        Amaç: Sistem açıklarını kötü niyetli kişilerden önce bulup kapatmak.
-                    </p>
-                </div>
+      <div class="hobby-grid">
+        <div class="hobby-card">
+          <div class="accordion-header card-header">
+            <img
+              src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop"
+              alt="Hacker Mask Binary Code"
+            />
+            <div class="card-overlay">
+              <h3 style="font-family: &quot;Courier Prime&quot;, monospace">
+                Etik Hackerlık
+              </h3>
+              <span class="icon">+</span>
             </div>
-
-            <div class="hobby-card">
-                <div class="accordion-header card-header">
-                    <img src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=800&auto=format&fit=crop"
-                        alt="Football Stadium Night">
-                    <div class="card-overlay">
-                        <h3>Futbol</h3>
-                        <span class="icon">+</span>
-                    </div>
-                </div>
-                <div class="accordion-content">
-                    <p>
-                        Sadece kod yazmak yetmez, fiziksel kondisyon da şart.
-                        Haftalık halı saha maçlarında takım oyunu ve strateji yeteneklerimi
-                        sahaya yansıtıyorum. Tıpkı yazılım gibi, futbol da bir takım işidir.
-                    </p>
-                </div>
-            </div>
-
-            <div class="hobby-card">
-                <div class="accordion-header card-header">
-                    <img src="https://images.unsplash.com/photo-1555617778-02518510b9fa?q=80&w=800&auto=format&fit=crop"
-                        alt="Cyber Brain Neural Network">
-                    <div class="card-overlay">
-                        <h3>Psikoloji</h3>
-                        <span class="icon">+</span>
-                    </div>
-                </div>
-                <div class="accordion-content">
-                    <p>
-                        İnsan zihnini "debug" etmek... Sosyal mühendislik saldırılarını anlamak için
-                        insan psikolojisi ve davranış bilimleri ile ilgileniyorum.
-                        Yazılımın insanla buluştuğu noktayı analiz ediyorum.
-                    </p>
-                </div>
-            </div>
-
+          </div>
+          <div class="accordion-content">
+            <p>
+              Sistem güvenliği ve penetrasyon testleri üzerine çalışıyorum.
+              <strong>Kali Linux</strong> ve ağ protokolleri (TCP/IP) üzerine
+              pratik yapıyorum. Amaç: Sistem açıklarını kötü niyetli kişilerden
+              önce bulup kapatmak.
+            </p>
+          </div>
         </div>
+
+        <div class="hobby-card">
+          <div class="accordion-header card-header">
+            <img
+              src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=800&auto=format&fit=crop"
+              alt="Football Stadium Night"
+            />
+            <div class="card-overlay">
+              <h3 style="font-family: &quot;Courier Prime&quot;, monospace">
+                Futbol
+              </h3>
+              <span class="icon">+</span>
+            </div>
+          </div>
+          <div class="accordion-content">
+            <p>
+              Sadece kod yazmak yetmez, fiziksel kondisyon da şart. Haftalık
+              halı saha maçlarında takım oyunu ve strateji yeteneklerimi sahaya
+              yansıtıyorum. Tıpkı yazılım gibi, futbol da bir takım işidir.
+            </p>
+          </div>
+        </div>
+
+        <div class="hobby-card">
+          <div class="accordion-header card-header">
+            <img
+              src="https://images.unsplash.com/photo-1555617778-02518510b9fa?q=80&w=800&auto=format&fit=crop"
+              alt="Cyber Brain Neural Network"
+            />
+            <div class="card-overlay">
+              <h3 style="font-family: &quot;Courier Prime&quot;, monospace">
+                Psikoloji
+              </h3>
+              <span class="icon">+</span>
+            </div>
+          </div>
+          <div class="accordion-content">
+            <p>
+              İnsan zihnini "debug" etmek... Sosyal mühendislik saldırılarını
+              anlamak için insan psikolojisi ve davranış bilimleri ile
+              ilgileniyorum. Yazılımın insanla buluştuğu noktayı analiz
+              ediyorum.
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 Atakan Taş. Tüm hakları saklıdır.</p>
-        <div class="social-links">
-            <a href="https://github.com/kullaniciadin" target="_blank"
-                style="color: var(--primary-color); margin: 0 10px; text-decoration: none;">[ GitHub ]</a>
-            <a href="https://linkedin.com/in/kullaniciadin" target="_blank"
-                style="color: var(--primary-color); margin: 0 10px; text-decoration: none;">[ LinkedIn ]</a>
-        </div>
+      <p>&copy; 2026 Atakan Taş. Tüm hakları saklıdır.</p>
+      <div class="social-links">
+        <a
+          href="https://github.com/AtakaanShiva"
+          target="_blank"
+          style="
+            color: var(--primary-color);
+            margin: 0 10px;
+            text-decoration: none;
+          "
+          >[ GitHub ]</a
+        >
+        <a
+          href="https://linkedin.com/in/atakan-ta%C5%9F-4824362a7"
+          target="_blank"
+          style="
+            color: var(--primary-color);
+            margin: 0 10px;
+            text-decoration: none;
+          "
+          >[ LinkedIn ]</a
+        >
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

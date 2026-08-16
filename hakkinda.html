@@ -1,123 +1,162 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Atakan Taş hakkında: Bilgisayar Bilimleri 4. sınıf öğrencisi, Seçil Kauçuk'ta IT stajyeri. Siber güvenlik ve yazılım geliştirme yetenekleri." />
+    <meta property="og:title" content="Atakan Taş" />
+    <meta property="og:description" content="Atakan Taş hakkında: Bilgisayar Bilimleri 4. sınıf öğrencisi, Seçil Kauçuk'ta IT stajyeri. Siber güvenlik ve yazılım geliştirme yetenekleri." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tasatakan.netlify.app/hakkinda.html" />
+    <script>
+      // Tema flaşını (FOUC) önlemek için erken çalışır; CSS/gövde
+      // yüklenmeden önce kayıtlı temayı <html> etiketine uygular.
+      (function () {
+        try {
+          if (localStorage.getItem("theme") === "light") {
+            document.documentElement.classList.add("light-mode");
+          }
+        } catch (e) {}
+      })();
+    </script>
     <title>Hakkında | Atakan Taş</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/919/919841.png">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn-icons-png.flaticon.com/512/919/919841.png"
+    />
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <nav class="navbar">
-            <div class="logo">&lt;AtakanTaş /&gt;</div>
-            <div class="hamburger" id="hamburger-btn">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="hakkinda.html" class="active">Hakkında</a></li>
-                <li><a href="hobiler.html">Hobiler</a></li>
-                <li><a href="portfolyo.html">Projeler</a></li>
-                <li><a href="iletisim.html">İletişim</a></li>
-                <li><button id="theme-toggle">Light Mode</button></li>
-            </ul>
-        </nav>
+      <nav class="navbar">
+        <div class="logo">&lt;AtakanTaş /&gt;</div>
+        <div class="hamburger" id="hamburger-btn">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="hakkinda.html" class="active">Hakkında</a></li>
+          <li><a href="hobiler.html">Hobiler</a></li>
+          <li><a href="portfolyo.html">Projeler</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+          <li><button id="theme-toggle">Light Mode</button></li>
+        </ul>
+      </nav>
     </header>
 
     <main class="container about-container">
+      <section class="bio-section">
+        <div class="profile-frame">
+          <img src="myfoto.jpeg" alt="Atakan Taş Profil" />
+        </div>
+        <h1>root@atakan:~$ <span class="highlight">whoami</span></h1>
 
-        <section class="bio-section">
-            <div class="profile-frame">
-                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=500&auto=format&fit=crop"
-                    alt="Atakan Taş Profil">
-            </div>
-            <h1>root@atakan:~$ <span class="highlight">whoami</span></h1>
+        <div class="terminal-box">
+          <p>> İsim: Atakan Taş</p>
+          <p>> Bölüm: Bilgisayar Bilimleri / 4. Sınıf</p>
+          <p>> Statü: IT Stajyeri @ Seçil Kauçuk</p>
+          <p>> Konum: Türkiye</p>
+          <p>> Durum: <span class="blink">Online...</span></p>
+          <br />
+          <p class="bio-text">
+            Merhaba, ben dijital dünyanın mimarlarından biri olma yolunda
+            ilerleyen bir bilgisayar bilimleri öğrencisiyim. Kod yazmayı sadece
+            satır satır komutlar üretmek olarak değil, arkasındaki mantığı
+            anlamak ve doğru çözümler inşa etmek olarak görüyorum. Bir problemin
+            köküne inmek, onu parçalarına ayırmak ve en verimli şekilde çözmek
+            benim için oldukça keyifli. <br /><br />
 
-            <div class="terminal-box">
-                <p>> İsim: Atakan Taş</p>
-                <p>> Bölüm: Bilgisayar Bilimleri 3. Sınıf</p>
-                <p>> Konum: Türkiye</p>
-                <p>> Durum: <span class="blink">Online...</span></p>
-                <br>
-                <p class="bio-text">
-                    Merhaba, ben dijital dünyanın mimarlarından biri olma yolunda ilerleyen bir mühendislik
-                    öğrencisiyim. Kod yazmayı sadece satır satır komutlar üretmek olarak değil, arkasındaki mantığı
-                    anlamak ve doğru çözümler inşa etmek olarak görüyorum. Bir problemin köküne inmek, onu parçalarına
-                    ayırmak ve en verimli şekilde çözmek benim için oldukça keyifli. <br>
+            Siber güvenlik, ağ protokolleri ve veri analizi üzerine
+            yoğunlaşıyor; sistemlerin nasıl çalıştığını, nerelerde zayıf
+            noktalar barındırdığını ve nasıl daha güvenli hâle
+            getirilebileceğini araştırmayı seviyorum. <br /><br />
 
-                    Yazılım geliştirme sürecinde özellikle sistemlerin nasıl çalıştığını, nerelerde zayıf noktalar
-                    barındırdığını ve nasıl daha güvenli hâle getirilebileceğini öğrenmeye ilgi duyuyorum. Modern web
-                    teknolojileriyle projeler üretmek, yeni araçlar denemek ve öğrendiklerimi gerçek senaryolarda
-                    uygulamak beni sürekli motive ediyor. <br>
+            Kendimi geliştirmeyi bir hedef değil, bir alışkanlık olarak
+            görüyorum. Amacım; sadece çalışan değil, aynı zamanda güvenli,
+            sürdürülebilir ve gerçek dünya problemlerini çözen sistemler
+            tasarlayan bir mühendis olmak.
+          </p>
+        </div>
+      </section>
 
-                    Kendimi geliştirmeyi bir hedef değil, bir alışkanlık olarak görüyorum. Bu yüzden yeni teknolojileri
-                    takip ediyor, farklı alanlarda denemeler yapıyor ve her projeden bir şeyler öğrenmeye çalışıyorum.
-                    Amacım; sadece çalışan değil, aynı zamanda güvenli, sürdürülebilir ve kullanıcı odaklı yazılımlar
-                    geliştiren bir mühendis olmak. <br>
-                </p>
-            </div>
-        </section>
+      <section class="skills-section">
+        <h2>&lt; Yetenek_Matrisi /&gt;</h2>
 
-        <section class="skills-section">
-            <h2>&lt; Yetenek_Matrisi /&gt;</h2>
+        <div class="skill">
+          <div class="skill-name">Python & Scripting</div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 90%">90%</div>
+          </div>
+        </div>
 
-            <div class="skill">
-                <div class="skill-name">Python & Scripting</div>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 90%;">90%</div>
-                </div>
-            </div>
+        <div class="skill">
+          <div class="skill-name">Siber Güvenlik</div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 85%">85%</div>
+          </div>
+        </div>
 
-            <div class="skill">
-                <div class="skill-name">Oyun Geliştirme</div>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 85%;">85%</div>
-                </div>
-            </div>
+        <div class="skill">
+          <div class="skill-name">Web Geliştirme (HTML/CSS/JS)</div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 80%">80%</div>
+          </div>
+        </div>
 
-            <div class="skill">
-                <div class="skill-name">Web Geliştirme (HTML/CSS/JS)</div>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 80%;">80%</div>
-                </div>
-            </div>
+        <div class="skill">
+          <div class="skill-name">Java & OOP</div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 75%">75%</div>
+          </div>
+        </div>
 
-            <div class="skill">
-                <div class="skill-name">Java & OOP</div>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 75%;">75%</div>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="skill-name">SQL & Veritabanı</div>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 70%;">70%</div>
-                </div>
-            </div>
-
-        </section>
-
+        <div class="skill">
+          <div class="skill-name">SQL & Veritabanı</div>
+          <div class="progress-bar">
+            <div class="progress" style="width: 70%">70%</div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Atakan Taş. Tüm hakları saklıdır.</p>
-        <div class="social-links">
-            <a href="https://github.com/kullaniciadin" target="_blank"
-                style="color: var(--primary-color); margin: 0 10px; text-decoration: none;">[ GitHub ]</a>
-            <a href="https://linkedin.com/in/kullaniciadin" target="_blank"
-                style="color: var(--primary-color); margin: 0 10px; text-decoration: none;">[ LinkedIn ]</a>
-        </div>
+      <p>&copy; 2026 Atakan Taş. Tüm hakları saklıdır.</p>
+      <div class="social-links">
+        <a
+          href="https://github.com/AtakaanShiva"
+          target="_blank"
+          style="
+            color: var(--primary-color);
+            margin: 0 10px;
+            text-decoration: none;
+          "
+          >[ GitHub ]</a
+        >
+        <a
+          href="https://linkedin.com/in/atakan-ta%C5%9F-4824362a7"
+          target="_blank"
+          style="
+            color: var(--primary-color);
+            margin: 0 10px;
+            text-decoration: none;
+          "
+          >[ LinkedIn ]</a
+        >
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

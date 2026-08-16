@@ -1,520 +1,459 @@
-/* Dosya: style.css */
 :root {
-    /* Varsayılan Renkler (Dark Mode / Hacker Theme) */
-    --bg-color: #0d0d0d;
-    --text-color: #e0e0e0;
-    --primary-color: #00ff41;
-    /* Matrix Yeşili */
-    --secondary-color: #1a1a1a;
-    --border-color: #00ff41;
+  /* Premium Kurumsal Paleti */
+  --bg-color: #0a0a0a; /* Neredeyse tam siyah, sonsuzluk hissi */
+  --text-color: #ededed; /* Göz yormayan kırık beyaz */
+  --primary-color: #0070f3; /* Çok keskin, dikkat çekici teknoloji mavisi */
+  --secondary-color: #171717; /* Kartlar için derin antrasit */
+  --border-color: #333; /* İnce ve zarif kenarlık rengi */
+  --accent-color: #f5a623; /* Detaylar için lüks turuncu/altın vurgu */
 }
 
-/* Light Mode Renkleri [cite: 18] */
-body.light-mode {
-    --bg-color: #ffffff;
-    --text-color: #1a1a1a;
-    --primary-color: #008f11;
-    /* Daha koyu yeşil okunabilirlik için */
-    --secondary-color: #f0f0f0;
-    --border-color: #ccc;
+:root.light-mode {
+  --bg-color: #f8f9fa;
+  --text-color: #111827;
+  --primary-color: #2563eb;
+  --secondary-color: #ffffff;
+  --border-color: #e5e7eb;
+  --accent-color: #ea580c;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Courier Prime', monospace;
-    /* Monospace font */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+.logo,
+.terminal-box,
+.btn,
+input,
+textarea,
+.nav-links a {
+  font-family: "Courier Prime", monospace;
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: background-color 0.3s, color 0.3s;
-    line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+  line-height: 1.6;
 }
 
-/* Navbar [cite: 24] */
+/* Navbar */
 header {
-    background-color: var(--secondary-color);
-    position: fixed;
-    /* Sabit Navbar */
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    border-bottom: 2px solid var(--primary-color);
+  background-color: var(--secondary-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 2px solid var(--primary-color);
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
 }
 
 .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: bold;
-    transition: color 0.3s;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: var(--primary-color);
-    text-shadow: 0 0 5px var(--primary-color);
+  color: var(--primary-color);
+  text-shadow: 0 0 5px rgba(97, 175, 239, 0.5);
 }
 
 /* Butonlar */
 .btn,
 #theme-toggle {
-    background-color: transparent;
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
-    padding: 5px 15px;
-    cursor: pointer;
-    font-family: inherit;
-    text-decoration: none;
-    display: inline-block;
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 5px 15px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
 }
 
 .btn:hover,
 #theme-toggle:hover {
-    background-color: var(--primary-color);
-    color: var(--bg-color);
+  background-color: var(--primary-color);
+  color: var(--bg-color);
 }
 
 /* Container & Bölümler */
 main {
-    margin-top: 80px;
-    /* Navbar payı */
-    padding: 2rem;
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  margin-top: 80px;
+  padding: 2rem;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .highlight {
-    color: var(--primary-color);
-    text-shadow: 0 0 10px var(--primary-color);
+  color: var(--primary-color);
+  text-shadow: 0 0 8px rgba(97, 175, 239, 0.4);
 }
 
-/* Accordion (Hobiler)  */
-.accordion {
-    width: 100%;
-    max-width: 600px;
-    margin-top: 2rem;
-    text-align: left;
-}
-
-.accordion-item {
-    border: 1px solid var(--border-color);
-    margin-bottom: 10px;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
+/* Accordion */
 .accordion-header {
-    width: 100%;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    padding: 15px;
-    text-align: left;
-    border: none;
-    cursor: pointer;
-    font-size: 1.1rem;
-    outline: none;
+  width: 100%;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 15px;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  outline: none;
 }
 
 .accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    /* Basit Animasyon [cite: 21] */
-    background-color: var(--bg-color);
-    padding: 0 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: var(--bg-color);
+  padding: 0 15px;
 }
 
 .accordion-content p {
-    padding: 15px 0;
+  padding: 15px 0;
 }
 
 /* Hamburger Menü (Mobile) */
 .hamburger {
-    display: none;
-    cursor: pointer;
+  display: none;
+  cursor: pointer;
 }
 
 .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: var(--text-color);
-    transition: all 0.3s ease;
-
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: var(--text-color);
+  transition: all 0.3s ease;
 }
 
-/* Responsive Tasarım (Media Queries) [cite: 23] */
 @media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .nav-links {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        flex-direction: column;
-        background-color: var(--secondary-color);
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        padding: 20px 0;
-        border-bottom: 2px solid var(--primary-color);
-    }
-
-    .nav-links.active {
-        left: 0;
-    }
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-links {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    padding: 20px 0;
+    border-bottom: 2px solid var(--primary-color);
+  }
+  .nav-links.active {
+    left: 0;
+  }
 }
 
-
-/* --- İletişim Formu Stilleri (style.css altına ekle) --- */
-
+/* İletişim Formu */
 .contact-section {
-    width: 100%;
-    max-width: 600px;
-    text-align: left;
-    background-color: rgba(26, 26, 26, 0.5);
-    /* Hafif transparan kutu */
-    padding: 2rem;
-    border: 1px solid var(--primary-color);
-    box-shadow: 0 0 15px rgba(0, 255, 65, 0.1);
-    /* Yeşil neon parlama */
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  border-top: 3px solid var(--primary-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .contact-section h1 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    color: var(--text-color);
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--text-color);
 }
 
-/* Input ve Textarea için Hacker Görünümü */
 input,
 textarea {
-    width: 100%;
-    padding: 10px;
-    background-color: #000;
-    /* Tam siyah zemin */
-    border: 1px solid #333;
-    border-left: 3px solid var(--primary-color);
-    /* Sol taraf yeşil çizgi */
-    color: var(--primary-color);
-    font-family: 'Courier Prime', monospace;
-    font-size: 1rem;
-    outline: none;
-    transition: all 0.3s ease;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-left: 3px solid var(--primary-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
 }
 
 input:focus,
 textarea:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 8px rgba(0, 255, 65, 0.3);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px rgba(97, 175, 239, 0.2);
 }
 
-/* Placeholder rengini biraz soluk yapalım */
 ::placeholder {
-    color: #555;
+  color: #5c6370;
 }
 
 .full-width {
-    width: 100%;
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+  width: 100%;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-
-
-/* --- Hobiler Sayfası Kart Tasarımı --- */
-
-/* Kartları yan yana dizen Grid yapısı */
+/* Hobiler ve Projeler Kart Tasarımı */
 .hobby-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    width: 100%;
-    max-width: 1000px;
-    margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 20px;
 }
 
-/* Kartın kendisi */
 .hobby-card {
-    background-color: #000;
-    border: 1px solid #333;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
 }
 
 .hobby-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
-    /* Neon yeşil gölge */
-    border-color: var(--primary-color);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-color: var(--primary-color);
 }
 
-/* Kartın üst kısmı (Resim + Başlık) */
 .card-header {
-    position: relative;
-    height: 200px;
-    /* Kart yüksekliği */
-    cursor: pointer;
-    overflow: hidden;
-    padding: 0;
-    /* Önceki padding'i sıfırladık */
+  position: relative;
+  height: 200px;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0;
 }
 
 .card-header img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.7;
-    /* Resmi biraz kararttık */
-    transition: opacity 0.3s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  transition: opacity 0.3s;
 }
 
 .hobby-card:hover img {
-    opacity: 1;
-    /* Mouse gelince parlasın */
+  opacity: 1;
 }
 
-/* Resmin üzerindeki yazı katmanı */
 .card-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(33, 37, 43, 0.95), transparent);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .card-overlay h3 {
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    text-shadow: 0 0 5px black;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
 }
 
 .card-overlay .icon {
-    font-size: 1.5rem;
-    font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-/* Açılan Metin Alanı */
-.accordion-content p {
-    padding: 15px;
-    color: #ccc;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    background-color: #111;
-    border-top: 1px solid var(--primary-color);
-}
-
-
-
-
-/* --- Hakkında Sayfası Stilleri --- */
-
+/* Hakkında Sayfası */
 .about-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 4rem;
-    align-items: flex-start;
-    text-align: left;
-    /* Genel ortalamayı bozup sola yaslıyoruz */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+  align-items: flex-start;
+  text-align: left;
 }
 
-/* Sol Taraf: Biyografi */
 .bio-section {
-    flex: 1;
-    min-width: 300px;
-    max-width: 500px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
 }
 
 .profile-frame {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid var(--primary-color);
-    padding: 5px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+  padding: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(97, 175, 239, 0.2);
 }
 
 .profile-frame img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    filter: grayscale(100%);
-    /* Siyah beyaz fotoğraf hacker havası katar */
-    transition: filter 0.3s;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
 }
 
 .profile-frame:hover img {
-    filter: grayscale(0%);
-    /* Üzerine gelince renklenir */
+  filter: grayscale(0%);
 }
 
 .terminal-box {
-    background-color: rgba(0, 0, 0, 0.8);
-    border: 1px solid #333;
-    padding: 20px;
-    border-radius: 5px;
-    font-family: 'Courier Prime', monospace;
-    font-size: 0.95rem;
-    color: #ccc;
-    position: relative;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  position: relative;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .terminal-box::before {
-    content: "info.txt";
-    /* Dosya adı süsü */
-    position: absolute;
-    top: -12px;
-    left: 20px;
-    background-color: var(--bg-color);
-    padding: 0 10px;
-    color: var(--primary-color);
-    font-size: 0.8rem;
+  content: "info.txt";
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background-color: var(--secondary-color);
+  padding: 0 10px;
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  border-radius: 4px;
 }
 
 .blink {
-    animation: blinker 1.5s linear infinite;
-    color: var(--primary-color);
-    font-weight: bold;
+  animation: blinker 1.5s linear infinite;
+  color: var(--accent-color);
+  font-weight: bold;
 }
 
 @keyframes blinker {
-    50% {
-        opacity: 0;
-    }
+  50% {
+    opacity: 0;
+  }
 }
 
-/* Sağ Taraf: Yetenek Barları */
 .skills-section {
-    flex: 1;
-    min-width: 300px;
-    max-width: 500px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
 }
 
 .skills-section h2 {
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    border-bottom: 1px solid #333;
-    padding-bottom: 10px;
-
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
 }
 
 .skill {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .skill-name {
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: var(--text-color);
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: var(--text-color);
 }
 
 .progress-bar {
-    width: 100%;
-    background-color: #222;
-    height: 20px;
-    border-radius: 3px;
-    overflow: hidden;
-    border: 1px solid #444;
+  width: 100%;
+  background-color: var(--bg-color);
+  height: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
 }
 
 .progress {
-    height: 100%;
-    background-color: var(--primary-color);
-    color: #000;
-    /* Yazı rengi siyah */
-    text-align: right;
-    padding-right: 5px;
-    line-height: 20px;
-    /* Dikey ortalama */
-    font-size: 0.8rem;
-    font-weight: bold;
-    width: 0;
-    /* JS ile veya inline style ile artırılır */
-    transition: width 1s ease-in-out;
+  height: 100%;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  text-align: right;
+  padding-right: 5px;
+  line-height: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  width: 0;
+  transition: width 1s ease-in-out;
 }
 
-/* --- Custom Scrollbar (Webkit tarayıcılar için) --- */
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
-
 ::-webkit-scrollbar-track {
-    background: #0d0d0d;
-    /* Arka plan siyah */
+  background: var(--bg-color);
 }
-
 ::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-    /* Çubuk neon yeşil */
-    border-radius: 5px;
-    border: 2px solid #0d0d0d;
+  background: var(--primary-color);
+  border-radius: 5px;
+  border: 2px solid var(--bg-color);
 }
-
 ::-webkit-scrollbar-thumb:hover {
-    background: #fff;
-    /* Üzerine gelince beyaz olsun */
+  background: var(--text-color);
 }
