@@ -1,4 +1,4 @@
-/* =========================================================
+﻿/* =========================================================
    ATAKAN TAŞ — Portföy
    Tasarım konsepti: "Editör Kabuğu" — site, pencere çubuğu,
    aktivite şeridi, dosya sekmeleri ve durum çubuğuyla gerçek
@@ -859,66 +859,82 @@ svg {
 }
 
 .hobby-card {
+  position: relative;
   background: var(--bg-panel);
   border: 1px solid var(--border);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  transition: border-color 0.25s ease, transform 0.25s ease;
+  height: 320px;
+  cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 .hobby-card:hover {
   border-color: var(--syntax-keyword);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lift);
 }
-
 .hobby-header {
-  position: relative;
-  height: 170px;
-  cursor: pointer;
-  overflow: hidden;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 }
 .hobby-header img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.55;
-  transition: opacity 0.3s ease, transform 0.4s ease;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  filter: brightness(0.7);
 }
 .hobby-card:hover .hobby-header img {
-  opacity: 0.85;
-  transform: scale(1.04);
+  transform: scale(1.08);
+  filter: brightness(0.2);
 }
 .hobby-overlay {
   position: absolute;
   inset: 0;
+  z-index: 2;
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  padding: 14px 16px;
-  background: linear-gradient(to top, rgba(10, 12, 16, 0.92), transparent 70%);
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(10,12,16, 0.95) 0%, rgba(10,12,16, 0.4) 50%, transparent 100%);
+  transition: opacity 0.4s ease;
+}
+.hobby-card:hover .hobby-overlay {
+  opacity: 0;
 }
 .hobby-overlay h3 {
-  font-size: 1.05rem;
+  font-size: 1.3rem;
   color: #fff;
+  margin-bottom: 0.5rem;
 }
 .hobby-toggle-icon {
-  color: var(--syntax-keyword);
-  font-family: var(--font-mono);
-  font-size: 1.1rem;
-  transition: transform 0.25s ease;
+  display: none;
 }
-.hobby-card.open .hobby-toggle-icon { transform: rotate(45deg); }
-
 .hobby-body {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.hobby-card:hover .hobby-body {
+  opacity: 1;
+  transform: translateY(0);
 }
 .hobby-body-inner {
-  padding: 1.1rem 1.3rem 1.3rem;
-  font-size: 0.9rem;
-  color: var(--text-secondary);
+  line-height: 1.6;
 }
-.hobby-body-inner strong { color: var(--syntax-string); }
+.hobby-body-inner strong {
+  color: var(--syntax-string);
+}
 
 /* --- Featured project card --- */
 .proj-card {
@@ -1123,3 +1139,5 @@ input:focus, textarea:focus {
   max-width: 600px;
   margin-top: 0.6rem;
 }
+
+

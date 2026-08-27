@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+﻿document.addEventListener("DOMContentLoaded", () => {
   // --- 1. Tema Değiştirici (Dark/Light Mode) ---
   // Class <html> üzerinde tutulur; flaş (FOUC) önlemi head'deki
   // inline script tarafından erkenden uygulanır, burada yalnızca
@@ -37,31 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
       tabbar.classList.toggle("open");
     });
   }
-
-  // --- 3. Accordion (Hobiler sayfası) ---
-  const hobbyHeaders = document.querySelectorAll(".hobby-header");
-  hobbyHeaders.forEach((header) => {
-    header.addEventListener("click", () => {
-      const card = header.closest(".hobby-card");
-      const body = card.querySelector(".hobby-body");
-      const isOpen = card.classList.contains("open");
-
-      document.querySelectorAll(".hobby-card.open").forEach((openCard) => {
-        if (openCard !== card) {
-          openCard.classList.remove("open");
-          openCard.querySelector(".hobby-body").style.maxHeight = null;
-        }
-      });
-
-      if (isOpen) {
-        card.classList.remove("open");
-        body.style.maxHeight = null;
-      } else {
-        card.classList.add("open");
-        body.style.maxHeight = body.scrollHeight + "px";
-      }
-    });
-  });
 
   // --- 4. İletişim Formu (Netlify Forms, AJAX ile sayfa yenilemeden) ---
   const contactForm = document.getElementById("contact-form");
@@ -111,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- 5. GitHub API — canlı repo listesi (Projeler sayfası) ---
   const repoGrid = document.getElementById("repo-grid");
   if (repoGrid) {
-    const GITHUB_USER = "AtakaanShiva";
+    const GITHUB_USER = "AtakanTas-io";
     const langColors = {
       Python: "#3572A5",
       JavaScript: "#f1e05a",
@@ -194,3 +169,5 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(tick, 30000);
   }
 });
+
+
